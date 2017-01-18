@@ -5,12 +5,19 @@ z3py で書かれたプログラムをいくつか置く
   - 第58回プログラミング・シンポジウム ( http://www.ipsj.or.jp/prosym/58/58program.html ) の発表
 田村直之，宋剛秀，番原睦則: SATソルバーの使い方 -問題をSATに符号化する方法-, 第58回プログラミング･シンポジウム予稿集, pp. 165 - 172 (2017).
 に紹介されていたクイーングラフ彩色問題を解くプログラムです．
-  - queen_coloring1.py は整数でencodingしてlinear algebra をtheoryとして使ったもの．
+    - queen_coloring1.py は整数でencodingしてlinear algebra をtheoryとして使ったもの．
+    - queen_coloring_bool.py はboolのみを使ったもの．符号化およびヒントは，上記論文の COL+D+H2 に対応する．
   - 実験環境
     - CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
     - Memory: memory 32GB
     - OS: Ubuntu 16.04.1 LTS
     - Python: Python 2.7.12
+  - 実行時間(user時間, 単位は秒)
+
+|  program \ n | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| queen_coloring1.py | 0.064 | 0.084 | 0.136 | 0.280 | 19.924 | 127.548 | 4174.640 | 503678.900 |
+| queen_coloring_bool.py | 0.196 | 0.392 | 0.716 | 1.212 | 2.484 | 15.880 | 282.384 | 382270.376 | 
 
 ```
  python2 queen_coloring1.py 12 
